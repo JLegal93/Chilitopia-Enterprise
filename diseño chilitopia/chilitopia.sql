@@ -123,3 +123,5 @@ FOREIGN KEY (id_card)
 REFERENCES cards (id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
+
+//DBCC CHECKIDENT (nombredetabla, RESEED,0) resetear autoincrementacion

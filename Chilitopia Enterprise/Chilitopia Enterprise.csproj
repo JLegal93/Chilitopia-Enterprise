@@ -54,6 +54,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CtrlHome.xaml.cs">
+      <DependentUpon>CtrlHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlTarjeta.xaml.cs">
+      <DependentUpon>CtrlTarjeta.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CtrlHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,10 +73,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BDSql.cs" />
+    <Compile Include="Globals.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="CtrlTarjeta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -131,6 +146,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icons\icons8-breve-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="conexion.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
