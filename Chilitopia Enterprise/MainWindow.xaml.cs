@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -24,51 +25,47 @@ namespace Chilitopia_Enterprise
         CtrlTarjeta tarjeta = new CtrlTarjeta();
 
         public MainWindow()
-            /*
-             * Ver si va a funcionar el sistema de hijos / scrollbar
-             */
         {
 
             InitializeComponent();
             //new BDSql();
 
-            GridHijos.Children.Add(home);
-            GridHijos.Children.Add(tarjeta);
-
+            PutChildren(btnhome, home);
+            //MessageBox.Show();
         }
 
         #region Botones
         private void Btnhome_Click(object sender, RoutedEventArgs e)
         {
-            Set_margin_slider(btnhome);
-
-            GridHijos.Children.Clear();
-            GridHijos.Children.Add(home);
+            PutChildren(btnhome,home);
         }
 
         private void Btntarjetas_Click(object sender, RoutedEventArgs e)
         {
-            Set_margin_slider(btntarjetas);
+            PutChildren(btntarjetas, tarjeta);
 
-            GridHijos.Children.Clear();
-            GridHijos.Children.Add(tarjeta);
-
-            MessageBox.Show(GridHijos.Children.Count.ToString());
         }
         private void BtnReportes_Click(object sender, RoutedEventArgs e)
         {
-            Set_margin_slider(btnReportes);
-            GridHijos.Children.Clear();
+            //PutChildren(btnReportes);
         }
         #endregion
-        private void Set_margin_slider (Button btn)
+        private void PutChildren (Button btn, UserControl uctrl)
         {
+            /*
+             * Coloca el hijo en el lugar, toma el tamanio del wrap contenedor, y pinta el boton actualmente activo
+             */
             Thickness margin = pnlSlider.Margin;
             margin.Top = btn.Margin.Top;
             pnlSlider.Margin = margin;
-
+            WrapHijos.Children.Clear();
+            WrapHijos.Children.Add(uctrl);
+            WrapHijos.Children[0].SetValue(WidthProperty, WrapHijos.ActualWidth);
+        }
+        private void WrapHijos_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            WrapHijos.Children[0].SetValue(WidthProperty, WrapHijos.ActualWidth);
         }
 
- 
     }
 }

@@ -4,8 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Chilitopia_Enterprise"
-             mc:Ignorable="d" Height="565.981" Width="1057.051">
-    <Grid Margin="8,10,10,10">
-        <TextBox x:Name="lblCodigoTarj" Height="80" Margin="416,160,485,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.503,0.488"/>
+             mc:Ignorable="d" Height="385" Width="574">
+    <Grid Background="Black">
+        <Label Content="Codigo de tarjeta:" Margin="19,24,0,0" Foreground="White" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="112"/>
+        <TextBox HorizontalAlignment="Left" Height="51" Margin="131,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Background="#FF460E4B"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="70,82,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Nombre:" Margin="10,82,0,0" Foreground="White" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60"/>
     </Grid>
 </UserControl>

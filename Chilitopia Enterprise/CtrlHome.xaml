@@ -4,26 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Chilitopia_Enterprise"
-             mc:Ignorable="d" Height="682.35" Width="808">
-    <Grid Background="#FF534949" Margin="0,0,27,23">
-        <ScrollViewer HorizontalScrollBarVisibility="Visible">
-            <Grid x:Name="MyGrid" HorizontalAlignment="Left" Height="535" VerticalAlignment="Top" Width="736" Margin="10,63,0,0">
-                <Grid.Resources>
-                    <Style TargetType="{x:Type Panel}">
-                        <Setter Property="Margin" Value="0,0,0,6" />
-                    </Style>
-                </Grid.Resources>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-            </Grid>
-        </ScrollViewer>
-
-        <Label Content="home" HorizontalAlignment="Left" Margin="325,145,0,0" VerticalAlignment="Top" Height="103" Width="176" Background="White"/>
-
+             mc:Ignorable="d" Height="528" Width="944">
+    <Grid x:Name="GridPrincipal" Background="#FF211F1F" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,10">
+        <Label Content="Chilitopia Enterprise" Margin="0,0,56,62" Foreground="White" FontSize="36" HorizontalAlignment="Right" Width="358" Height="70" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

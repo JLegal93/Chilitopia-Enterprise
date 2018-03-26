@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chilitopia_Enterprise"
         mc:Ignorable="d"
-        Title="Chilitopia Enterprise" Height="713.395" Width="1395.555" WindowStartupLocation="CenterScreen" Icon="icons/icon.png">
+        Title="Chilitopia Enterprise" Height="666.895" Width="1059.555" WindowStartupLocation="CenterScreen" Icon="icons/penguin.png">
     <Window.Resources>
+
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -63,7 +64,7 @@
         </Style>
     </Window.Resources>
     <Grid x:Name="GridPrincipal">
-        <DockPanel LastChildFill="False" Background="Black" HorizontalAlignment="Left" Width="246"/>
+        <DockPanel x:Name="DockMenu"  LastChildFill="False" Background="Black" HorizontalAlignment="Left" Width="246" />
         <DockPanel Height="44" LastChildFill="False" VerticalAlignment="Top" Background="#FF040303"/>
         <Button x:Name="btnhome" Content="Home" Height="62" VerticalAlignment="Top" Margin="53,52,0,0" RenderTransformOrigin="0.515,0.495" FontWeight="Bold" Click="Btnhome_Click" Foreground="White" HorizontalAlignment="Left" Width="193" BorderBrush="{x:Null}" Style="{DynamicResource ButtonStyle1}" FontSize="20" >
             <Button.Background>
@@ -81,6 +82,10 @@
                 <ImageBrush ImageSource="icons/icons8-información.png" Stretch="Uniform" AlignmentX="Left"/>
             </Button.Background>
         </Button>
-        <Grid x:Name="GridHijos" HorizontalAlignment="Left" Height="620" Margin="251,52,0,0" VerticalAlignment="Top" Width="1127"/>
+        <ScrollViewer x:Name="ScrPrincipal" Margin="246,44,0,0" ScrollViewer.VerticalScrollBarVisibility='Auto' ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <WrapPanel x:Name="WrapHijos"  Background="#FF660000" SizeChanged="WrapHijos_SizeChanged"/>
+        </ScrollViewer>
+
     </Grid>
+
 </Window> 
