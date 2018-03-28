@@ -16,26 +16,19 @@ using System.Windows.Shapes;
 namespace Chilitopia_Enterprise
 {
     /// <summary>
-    /// Lógica de interacción para UserControl1.xaml
+    /// Lógica de interacción para CtrlNewCard.xaml
     /// </summary>
-    public partial class CtrlTarjeta : UserControl
+    public partial class CtrlNewCard : UserControl
     {
-        
-
-        public CtrlTarjeta()
+        public CtrlNewCard()
         {
             InitializeComponent();
 
         }
 
-        private void BtnNuevo_Click(object sender, RoutedEventArgs e)
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            CtrlNewCard newCard = new CtrlNewCard();
-            WrapPrinc.Children.Clear();
-            WrapPrinc.Children.Add(newCard);
-           
-            
-           
+            txtCant.Focus();
         }
     }
 }

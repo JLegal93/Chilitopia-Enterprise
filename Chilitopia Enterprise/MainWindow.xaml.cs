@@ -26,12 +26,15 @@ namespace Chilitopia_Enterprise
 
         public MainWindow()
         {
-
+            
             InitializeComponent();
+
+            
             //new BDSql();
 
             PutChildren(btnhome, home);
             //MessageBox.Show();
+
         }
 
         #region Botones
@@ -43,7 +46,6 @@ namespace Chilitopia_Enterprise
         private void Btntarjetas_Click(object sender, RoutedEventArgs e)
         {
             PutChildren(btntarjetas, tarjeta);
-
         }
         private void BtnReportes_Click(object sender, RoutedEventArgs e)
         {

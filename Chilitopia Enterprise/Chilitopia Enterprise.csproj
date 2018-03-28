@@ -57,10 +57,17 @@
     <Compile Include="CtrlHome.xaml.cs">
       <DependentUpon>CtrlHome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CtrlNewCard.xaml.cs">
+      <DependentUpon>CtrlNewCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CtrlTarjeta.xaml.cs">
       <DependentUpon>CtrlTarjeta.xaml</DependentUpon>
     </Compile>
     <Page Include="CtrlHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CtrlNewCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,7 +147,7 @@
     <Resource Include="icons\icons8-más-2-matemáticas.png" />
     <Resource Include="icons\icons8-nike.png" />
     <Resource Include="icons\icons8-nueva-ventana.png" />
-    <Resource Include="icons\icons8-por-nueva-copia.png" />
+    <Resource Include="icons\nueva.png" />
     <Resource Include="icons\icons8-reiniciar.png" />
     <Resource Include="icons\icons8-soporte-informático.png" />
   </ItemGroup>
